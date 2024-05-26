@@ -1,0 +1,41 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-2">
+<SCRIPT LANGUAGE= "JavaScript" type= "text/javascript">
+<!-- Ukrycie przed przeglądarkami nie obsługującymi JavaScriptów
+var speed = 100;
+var sizeX = 320;
+var sizeY = 200;
+var stepX = 0;
+var stepY = 0;
+var steps = 20;
+var imgObj;
+function ustaw()
+{
+  imgObj = document.getElementById('obrazekId');
+  stepX = Math.ceil(sizeX / steps);
+  stepY = Math.ceil(sizeY / steps);
+}
+function resize()
+{
+  currentW = imgObj.width;
+  currentH = imgObj.height;
+  if ((currentW < sizeX) && (currentH < sizeY)){
+    imgObj.width = currentW + stepX;
+    imgObj.height = currentH + stepY;
+    setTimeout("resize()", speed);
+  }
+}
+// Koniec kodu JavaScript -->
+</SCRIPT>
+</HEAD>
+<BODY onLoad='ustaw();resize();'>
+<DIV ID="imgLayer" ALIGN="center">
+<IMG SRC="kanye.jpg"
+     NAME="obrazek"
+     ID="obrazekId"
+     HEIGHT="1"
+     WIDTH="1">
+</DIV>
+</BODY>
+</HTML>
