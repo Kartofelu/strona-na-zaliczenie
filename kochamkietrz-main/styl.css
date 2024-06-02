@@ -1,5 +1,6 @@
 body {
- background : #D3FAD6;
+ background-image: url("las.jpg");
+ background-color: #cccccc;
  text-align : left;
  margin : 50px;
  font-family : Verdana;
